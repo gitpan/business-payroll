@@ -1,3 +1,9 @@
+libbusiness-payroll-perl (1.1-1) unstable; urgency=low
+
+  * Updated to cover 2005 tax tables.
+
+ -- James A. Pattie <james@pcxperience.com>  Tue, 18 Jan 2005 14:09:00 -0600
+
 libbusiness-payroll-perl (1.0-2) unstable; urgency=low
 
   * Trying to fix the US::MO isValid issue.

@@ -1,7 +1,7 @@
 # FICA.pm
 # Created:  Feb 27 15:24:49 CST 2002
 # by JT Moree
-# $Id: FICA.pm,v 1.10 2004/10/22 23:45:33 pcxuser Exp $
+# $Id: FICA.pm,v 1.12 2005/01/18 20:14:23 pcxuser Exp $
 # License: same as perl
 # 2002-2003 Xperience, Inc. www.pcxperience.com
 
@@ -59,14 +59,15 @@ sub new
     $self->prefixError();
     return $self;
   }
-  
+
     $self->{debug} = 'no';
     $self->{dataTables} =  {
             '19990101' => {cap => '72000.00' , rate => '0.062'},
             '20000101' => {cap => '76200.00' , rate => '0.062'},
             '20010101' => {cap => '80400.00' , rate => '0.062'},
-            '200301101' => {cap => '87000.00' , rate => '0.062'},
-            '200401101' => {cap => '87900.00' , rate => '0.062'},
+            '20030101' => {cap => '87000.00' , rate => '0.062'},
+            '20040101' => {cap => '87900.00' , rate => '0.062'},
+            '20050101' => {cap => '90000.00' , rate => '0.062'},
     };
   if (defined $args{debug})
   { $self->{debug} = $args{debug}; }
@@ -256,8 +257,8 @@ sub rateCap
   if (scalar @_ == 1)  {
     $date = @_[0];
   }
-  else 
-  {  
+  else
+  {
     $self->error("Date is missing");
     return undef;
   }

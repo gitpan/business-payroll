@@ -1,7 +1,7 @@
 # StateIncome.pm
 # Created:  Thu Feb 14 15:30:24 CST 2002
 # by Xperience, Inc. (mailto:admin@pcxperience.com)
-# $Id: StateIncome.pm,v 1.13 2004/10/22 23:45:33 pcxuser Exp $
+# $Id: StateIncome.pm,v 1.14 2005/01/15 19:26:38 moreejt Exp $
 # Copyright (c) 2002-2003 http://www.pcxperience.org  All rights reserved.
 # license: same as perl
 
@@ -57,7 +57,7 @@ sub new
     $self->prefixError();
     return $self;
   }
-  
+
       $self->{periodDays} = {
         annual => 1,
         semiannual => 2,
@@ -154,7 +154,28 @@ sub new
                     {bottom => '8000.01', percent => '0.055' },
                     {bottom => '9000.01', percent => '0.06' }
                 ]
-            }
+            },
+            '20050101' => {
+               standardDeduction => {single => '5000', married => '10000' , spouseWorks => '5000', head => '7300' },
+               allowance1 => { single => '1200', married => '1200' , spouseWorks => '1200', head => '3500'},
+               allowance2 => { single => '1200', married => '1200' , spouseWorks => '1200', head => '1200'},
+               allowance3 => { single => '1200', married => '1200' , spouseWorks => '1200', head => '1200'},
+               allowance4 => { single => '1200', married => '1200' , spouseWorks => '1200', head => '1200'},
+               allowance5 => { single => '1200', married => '1200' , spouseWorks => '1200', head => '1200'},
+               federalLimit => { single => '5000', married => '10000' , spouseWorks => '5000' },
+               percentTable => [
+                    {bottom => '0', percent => '.015' },
+                    {bottom => '1000.01', percent => '0.02' },
+                    {bottom => '2000.01', percent => '0.025' },
+                    {bottom => '3000.01', percent => '0.03' },
+                    {bottom => '4000.01', percent => '0.035' },
+                    {bottom => '5000.01', percent => '0.04' },
+                    {bottom => '6000.01', percent => '0.045' },
+                    {bottom => '7000.01', percent => '0.05' },
+                    {bottom => '8000.01', percent => '0.055' },
+                    {bottom => '9000.01', percent => '0.06' }
+                ]
+            },
         };
 
   return $self;
