@@ -1,7 +1,7 @@
 # Payroll.pm
 # Created:  Fri May 31 12:04:36 CDT 2002
 # by Xperience, Inc. (mailto:payroll@pcxperience.com)
-# $Id: Payroll.pm,v 1.29 2005/01/15 21:38:14 moreejt Exp $
+# $Id: Payroll.pm,v 1.30 2005/02/22 16:36:53 pcxuser Exp $
 #This package is released under the same license as Perl
 # Copyright (c) 2002-2003 http://www.pcxperience.org  All rights reserved.
 
@@ -46,7 +46,7 @@ require Exporter;
 @ISA = qw(Business::Payroll::Base Exporter AutoLoader);
 @EXPORT = qw();
 
-$VERSION = '1.1';
+$VERSION = '1.2';
 
 my %trueFalse = ( 1 => "true", 0 => "false" );
 my %falseTrue = ( "true" => 1, "false" => 0 );
