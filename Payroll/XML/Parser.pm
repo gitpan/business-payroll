@@ -120,10 +120,11 @@ sub parse
 
   if (length $args{file} > 0)
   {
-    if ($args{file} !~ /^(-|.*\.xml)$/)
-    {
-      die "$errStr file = '$args{file}' is not a valid file!\n";
-    }
+#removed by JT bc this is a STUPID check.  who cares what the file extentions are.  in fact I'm now using .raw and .cook
+#    if ($args{file} !~ /^(-|.*\.xml)$/)
+#    {
+#      die "$errStr file = '$args{file}' is not a valid file!\n";
+#    }
     if ($args{file} ne "-" && ! -e $args{file})
     {
       die "$errStr Can not find config file = '$args{file}'!  $!\n";

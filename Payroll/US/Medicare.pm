@@ -1,7 +1,7 @@
 # Medicare.pm
 # Created:  Feb 27 15:24:49 CST 2002
 # by JT Moree
-# $Id: Medicare.pm,v 1.9 2004/10/22 23:45:33 pcxuser Exp $
+# $Id: Medicare.pm,v 1.10 2005/12/30 15:11:01 moreejt Exp $
 # License: same as perl
 # 2002-2003 Xperience, Inc. www.pcxperience.com
 
@@ -40,6 +40,8 @@ use constant TRUE => 1;
 use constant FALSE => 0;
 
 =head1 Exported FUNCTIONS
+
+=over 4
 
 =head2  scalar new()
 

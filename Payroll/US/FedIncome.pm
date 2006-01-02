@@ -1,7 +1,7 @@
 # FedIncome.pm
 # Created:  Thu Feb 14 15:24:49 CST 2002
 # by JT Moree
-# $Id: FedIncome.pm,v 1.13 2005/01/15 19:26:38 moreejt Exp $
+# $Id: FedIncome.pm,v 1.15 2005/12/30 15:11:01 moreejt Exp $
 #2002-2003 Xperience, Inc. www.pcxperience.com
 # license:  same as perl
 
@@ -40,6 +40,8 @@ use constant TRUE => 1;
 use constant FALSE => 0;
 
 =head1 Exported FUNCTIONS
+
+=over 4
 
 =head2  scalar new()
 
@@ -147,6 +149,19 @@ sub new
                     {singleBottom =>  '268.30'    , percent => '.28'      , marriedBottom =>  '464.40' },
                     {singleBottom =>  '584.40'    , percent => '.33'      , marriedBottom =>  '729.20' },
                     {singleBottom => '1262.50'    , percent => '.35'      , marriedBottom => '1281.70' },
+                ]
+            },
+            '20060101' => {
+                tables => {},
+                dailyWithholdingAllowance => 12.69,
+                dailyTableRows => [
+                    {singleBottom =>     '0.0'    , percent =>   '0'      , marriedBottom =>    '0.00' },
+                    {singleBottom =>   '10.20'    , percent => '.10'      , marriedBottom =>   '30.80' },
+                    {singleBottom =>   '38.50'    , percent => '.15'      , marriedBottom =>   '88.10' },
+                    {singleBottom =>  '124.00'    , percent => '.25'      , marriedBottom =>  '261.70' },
+                    {singleBottom =>  '281.70'    , percent => '.28'      , marriedBottom =>  '488.10' },
+                    {singleBottom =>  '602.50'    , percent => '.33'      , marriedBottom =>  '751.70' },
+                    {singleBottom => '1301.50'    , percent => '.35'      , marriedBottom => '1321.30' },
                 ]
             },
     };

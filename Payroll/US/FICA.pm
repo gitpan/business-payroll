@@ -1,7 +1,7 @@
 # FICA.pm
 # Created:  Feb 27 15:24:49 CST 2002
 # by JT Moree
-# $Id: FICA.pm,v 1.12 2005/01/18 20:14:23 pcxuser Exp $
+# $Id: FICA.pm,v 1.14 2005/12/30 15:11:01 moreejt Exp $
 # License: same as perl
 # 2002-2003 Xperience, Inc. www.pcxperience.com
 
@@ -41,6 +41,8 @@ use constant FALSE => 0;
 
 =head1 Exported FUNCTIONS
 
+=over 4
+
 =head2  scalar new()
 
         Creates a new instance of the object.
@@ -68,6 +70,7 @@ sub new
             '20030101' => {cap => '87000.00' , rate => '0.062'},
             '20040101' => {cap => '87900.00' , rate => '0.062'},
             '20050101' => {cap => '90000.00' , rate => '0.062'},
+            '20060101' => {cap => '92400.00' , rate => '0.062'},
     };
   if (defined $args{debug})
   { $self->{debug} = $args{debug}; }

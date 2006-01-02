@@ -1,7 +1,7 @@
 # Payroll.pm
 # Created:  Fri May 31 12:04:36 CDT 2002
 # by Xperience, Inc. (mailto:payroll@pcxperience.com)
-# $Id: Payroll.pm,v 1.30 2005/02/22 16:36:53 pcxuser Exp $
+# $Id: Payroll.pm,v 1.33 2005/12/30 15:11:01 moreejt Exp $
 #This package is released under the same license as Perl
 # Copyright (c) 2002-2003 http://www.pcxperience.org  All rights reserved.
 
@@ -30,7 +30,39 @@ Business::Payroll
 
 =head1 DESCRIPTION
 
-This is the base package for the Business::Payroll Module.
+This is the base package for the Business::Payroll Module.  
+It can be used programmatically per the synopsis above or with standalone
+xml files.  There are two perl scripts included with this module to
+update and process the xml files.  The standard procedure would be
+
+  1) Create xml file by hand or use example from this doc as a template.  This is called 'raw' data.
+  2) 'cook' the data by running the process_payroll script.  (no arguments will give help output)
+  3) For the next pay period you can manually copy and change the previous raw data or run update_payroll
+  4) Repeat step 2
+
+NOTE: There are no requirements on file names.  We use two directories of input and output files and use dates for file names.  You can also put all files in one directory and name them something like input_DATE.xml output_DATE.xml. 
+
+Example:
+
+=over 4
+
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<payroll type="raw" version="1.0" date="20040713" period="biweekly" genSysId="20040628-20040711">
+  <person id="1" name="Person A" marital="single">
+    <country name="US" gross="1362.00" allow="2" withHold="0.00" grossYTD="13166.00" federalYTD="1071.00" method="">
+      <state name="MO" gross="1362.00" allow="1" withHold="5.00" method="">
+      </state>
+    </country>
+  </person>
+  <person id="2" name="Person B" marital="single">
+    <country name="US" gross="541.00" allow="1" withHold="0.00" grossYTD="9899.00" federalYTD="835.00" method="">
+      <state name="MO" gross="541.00" allow="0" withHold="2.00" method="">
+      </state>
+    </country>
+  </person>
+</payroll>
+
+=back
 
 =cut
 
@@ -46,14 +78,14 @@ require Exporter;
 @ISA = qw(Business::Payroll::Base Exporter AutoLoader);
 @EXPORT = qw();
 
-$VERSION = '1.2';
+$VERSION = '1.3';
 
 my %trueFalse = ( 1 => "true", 0 => "false" );
 my %falseTrue = ( "true" => 1, "false" => 0 );
 
 =head1 Exported FUNCTIONS
 
-=pod
+=over 4
 
 =head2  scalar new()
 

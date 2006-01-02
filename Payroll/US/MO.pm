@@ -1,7 +1,7 @@
 # MO.pm
 # Created:  Fri May 31 12:04:36 CDT 2002
 # by Xperience, Inc. (mailto:admin@pcxperience.com)
-# $Id: MO.pm,v 1.12 2004/11/26 19:16:26 pcxuser Exp $
+# $Id: MO.pm,v 1.13 2005/12/30 15:11:01 moreejt Exp $
 # Copyright (c) 2002-2003 http://www.pcxperience.org  All rights reserved.
 # License: same as perl
 
@@ -53,7 +53,7 @@ my %falseTrue = ( "true" => 1, "false" => 0 );
 
 =head1 Exported FUNCTIONS
 
-=pod
+=over 4
 
 =head2  scalar new()
 

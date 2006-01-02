@@ -1,7 +1,7 @@
 # Mileage.pm
 # Created:  Feb 27 15:24:49 CST 2002
 # by James A. Pattie
-# $Id: Mileage.pm,v 1.7 2005/02/20 14:06:28 moreejt Exp $
+# $Id: Mileage.pm,v 1.9 2005/12/30 15:11:01 moreejt Exp $
 # License: same as perl
 # 2002-2003 Xperience, Inc. www.pcxperience.com
 
@@ -42,6 +42,8 @@ use constant FALSE => 0;
 
 =head1 Exported FUNCTIONS
 
+=over 4
+
 =head2  scalar new()
 
         Creates a new instance of the object.
@@ -70,7 +72,9 @@ sub new
             '20020101' => {rate => '0.365'},
             '20030101' => {rate => '0.36'},
             '20040101' => {rate => '0.375'},
-            '20050101' => {rate => '0.40'},
+            '20050101' => {rate => '0.405'}, #originally .40 but the 2006 circular from irs says this is the correct amount for 2005.
+            '20050901' => {rate => '0.485'},
+            '20060101' => {rate => '0.445'},
     };
   if (defined $args{debug})
   { $self->{debug} = $args{debug}; }
